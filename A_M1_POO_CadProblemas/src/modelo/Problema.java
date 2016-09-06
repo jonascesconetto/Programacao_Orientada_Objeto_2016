@@ -31,9 +31,14 @@ public class Problema {
     }
     
     //Método para obter o problema apartir do código
-    public static Problema obterProblemaPeloCodigo(int codigoProblema){       
+    public static Problema obterProblemaPeloCodigo(String codigoProblema){
+        //int foo = Integer.parseInt("1234");
+        
+        int codigo = Integer.parseInt(codigoProblema);
+        
         for (Problema objDaVez : Problema.obterLista()){
-            if (objDaVez.getCodigo() == codigoProblema){
+            if (objDaVez.getCodigo() == codigo){
+                
                 return objDaVez;
             }
         }

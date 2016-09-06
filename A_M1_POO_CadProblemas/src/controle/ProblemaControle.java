@@ -30,7 +30,7 @@ public class ProblemaControle {
         return Problema.obterLista();
     }
     
-    public static Problema obterProblemaPeloCodigo(int codigoProblema){
+    public static Problema obterProblemaPeloCodigo(String codigoProblema){
         return Problema.obterProblemaPeloCodigo(codigoProblema);
     }
 }

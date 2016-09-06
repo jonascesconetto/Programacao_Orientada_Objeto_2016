@@ -66,24 +66,18 @@ public class ProblemaVisao {
         //Interação usuario
         System.out.println("\nO que deseja fazer?");  
         System.out.println("M - Voltar ao Menu");
-        System.out.println("Digite o código do problema para mudar a situação para resolvido\n");
-        System.out.print("Opção ->> ");
+        System.out.println("Digite o código do problema para mudar a situação para resolvido\n"); 
         //Parametro de entrada
         Scanner entrada = new Scanner(System.in);
         String valorEntrada = entrada.nextLine();
         //como o objeto que será testado é uma string
         //o java possui equals que retorna true se o teste for verdadeiro
  
-        if (valorEntrada.equals("m")||valorEntrada.equals("M")) {
+        if (valorEntrada.equals("m")) {
             Menu.exibirMenu();
         } else {
             
-            Problema encontrado = null;
-            try{
-                encontrado = ProblemaControle.obterProblemaPeloCodigo(Integer.parseInt(valorEntrada));
-            }catch(Exception e){
-                
-            }
+            Problema encontrado = ProblemaControle.obterProblemaPeloCodigo(valorEntrada);
             
             if (encontrado == null) {
                 System.out.println("\nProblema não encontrado.");

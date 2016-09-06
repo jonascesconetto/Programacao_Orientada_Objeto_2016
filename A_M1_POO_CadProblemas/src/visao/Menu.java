@@ -19,7 +19,7 @@ public class Menu {
             System.out.println("Digite V para visualizar os problemas reportados.");
             System.out.println("Digite R para reportar um novo problema.");
             System.out.println("Presione qualquer outra para SAIR !!!");
-            System.out.print("Opção-->> ");
+            System.out.println("Opção:");
             Scanner entrada = new Scanner(System.in);
             char opcao = 0;
             //Validação de dados
