@@ -19,13 +19,13 @@ public class Menu {
             System.out.println("Digite V para visualizar os problemas reportados.");
             System.out.println("Digite R para reportar um novo problema.");
             System.out.println("Presione qualquer outra para SAIR !!!");
-            System.out.println("Opção:");
+            System.out.print("Opção ->> ");
             Scanner entrada = new Scanner(System.in);
             char opcao = 0;
             //Validação de dados
             try{
                 opcao = entrada.nextLine().charAt(0);
-                System.out.println("O usuario digitou " + opcao);
+                //System.out.println("O usuario digitou " + opcao);
             }catch(Exception e){
                 System.out.println("Erro !!! \n --->> " + e.getClass());
             }
