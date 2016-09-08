@@ -22,7 +22,7 @@ public class ProblemaVisao {
         Scanner entrada = new Scanner (System.in);
         int codigo=0;
         String descricao, situacao;
-        Date dataReportagemProblema;
+        Date dataReportagemProblema, dataAtual;
         //PARAMETROS DE ENTRADA
         System.out.println("==== REPORTE DE NOVO PROBLEMAS ====");       
         //Parametro do código
@@ -35,13 +35,22 @@ public class ProblemaVisao {
         //Parametro da data
         System.out.println("Digite a data que o problema foi reportado: ");
         SimpleDateFormat formatadorData = new SimpleDateFormat("dd/MM/yyyy");
+        dataAtual = new Date();
         formatadorData.setLenient(false);
+        //inserção da data com validação do dia atual
         do{
             try{
                 dataReportagemProblema = formatadorData.parse(entrada.nextLine());
-                break;
+                if(dataReportagemProblema.after(dataAtual)){
+                    System.out.println("Data Invalida !!! \nPor favor digite novamente: ");         
+                }else{
+                    if (dataReportagemProblema.before(dataAtual)){
+                        System.out.println("Data Valida!!!\n"); 
+                    }
+                    break;
+                }
             }catch(Exception e){
-                System.out.println("Data Invalida !!! \n Por favor digite novamente: ");
+                
             }    
         }while(true);      
         //Unir a camada visão com a camada do controle
