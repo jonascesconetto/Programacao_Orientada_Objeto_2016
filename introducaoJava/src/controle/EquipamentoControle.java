@@ -9,6 +9,7 @@ import armazenamento.MeioArmazenamento;
 import java.util.ArrayList;
 import java.util.Date;
 import modelo.Equipamento;
+import modelo.EquipamentoDao;
 import modelo.Manutencao;
 
 /**
@@ -27,21 +28,20 @@ public class EquipamentoControle {
         objetoEquipamento.setDataTerminoGarantia(dataTerminoGarantia);
         objetoEquipamento.setValor(valor);
         //persistencia de arquivo em uma lista ==>>SALVAR<<==
-        objetoEquipamento.salvar();    
-        
+        EquipamentoDao.salvar(objetoEquipamento);   
     }
     
     public static ArrayList<Equipamento> obterListaEquipamentos(){
         //obtenho uma lista dos equipamentos
-        return Equipamento.obterLista();
+        return EquipamentoDao.obterLista();
     }
     
     public static Equipamento obterEquipamentoPeloNumeroDoPatrimonio(String numeroPatrimonio){
-        return Equipamento.obterPeloNumero(numeroPatrimonio);
+        return EquipamentoDao.obterPeloNumero(numeroPatrimonio);
     }
     
     public static void receberDadosNovaManutencao(String numeroPatrimonio, String descricao, Date data, float valor){
-        Equipamento encontrado = Equipamento.obterPeloNumero(numeroPatrimonio);
+        Equipamento encontrado = EquipamentoDao.obterPeloNumero(numeroPatrimonio);
         Manutencao novaManutencao = new Manutencao();
         novaManutencao.setData(data);
         novaManutencao.setDescricao(descricao);

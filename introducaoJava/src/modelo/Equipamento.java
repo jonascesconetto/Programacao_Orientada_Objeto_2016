@@ -13,7 +13,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 /**
  *
@@ -32,82 +34,7 @@ public class Equipamento {
     public Equipamento(){
         this.listaManutencoes = new ArrayList();
     }
-    
-    //metodo para obter o número de patrimonio
-    public static Equipamento obterPeloNumero(String numeroPatrimonio){
-        for (Equipamento objDaVez : Equipamento.obterLista()){
-            if (objDaVez.getPatrimonio().equals(numeroPatrimonio)){
-                return objDaVez;
-            }
-        }
-        return null;
-    }
-    
-    //quando eu mudar o armazenamento so irei alterar isso
-    /*
-    public static ArrayList<Equipamento> obterLista(){
-        return MeioArmazenamento.MEIO_ARMAZENAMENTO_EQUIPAMENTOS;
-    }*/
-    
-    public static ArrayList<Equipamento> obterLista(){    
-        //LEITURA NO ARQUIVO
-        Path caminhoArquivo = Paths.get("dados.txt");
-        
-        try{
-            for( String linha : Files.readAllLines(caminhoArquivo) ){
-                //System.out.println(linha);
-                linha.toString();
-                
-                String[] parts = linha.split(";");
-        
-                String nome = parts[0];
-                String patrimonio = parts[1]; // 034556
-                String dataAquisição = parts[2];
-                String dataTerminoGarantia = parts[3];
-                String valor = parts[4]; 
-                
-                System.out.println(nome+"\t\t|\t"+patrimonio+"\t\t\t|\t");//+dataAquisição+"\t\t"+dataTerminoGarantia+"\t\t"+valor);
-                
-            }      
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        System.out.println("\n");
-        //System.out.println(caminhoArquivo.toString());
-        
-        /*
-        String test = caminhoArquivo.toString();
-        String[] parts = test.split(";");
-        String nome = parts[0]; // 004
-        String patrimonio = parts[1]; // 034556
-        String dataAquisição = parts[2];
-        String dataTerminoGarantia = parts[3];
-        String valor = parts[4]; 
-        System.out.println("Test: "+nome+" ");
-        */
-       
-        return MeioArmazenamento.MEIO_ARMAZENAMENTO_EQUIPAMENTOS;
-    
-    }
-    
-    //Salvar 
-    public void salvar(){
-        
-        //MeioArmazenamento.MEIO_ARMAZENAMENTO_EQUIPAMENTOS.add(this);
-        
-        //ESCRITA NO ARQUIVO
-        Path caminhoArquivo = Paths.get("dados.txt");
-        String separadoLinha = System.getProperty("line.separator"); 
-        String dadosEquipamentos = this.getNome()+";"+this.getPatrimonio()+";"+this.getDataAquisicao().toString()+";"+getDataTerminoGarantia().toString()+";"+getValor()+";"+separadoLinha;
-        
-        try{
-            Files.write(caminhoArquivo, dadosEquipamentos.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-        }catch(Exception e){
-            
-        }
-    
-    }
-    
+     
     //criar um metodo para acessar as manutenções em uma outra classe
     public ArrayList<Manutencao> getListaManutencoes(){
         return this.listaManutencoes;
