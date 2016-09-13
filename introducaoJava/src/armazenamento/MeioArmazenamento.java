@@ -16,5 +16,5 @@ import modelo.Equipamento;
 public class MeioArmazenamento {
     
     public static ArrayList<Equipamento> MEIO_ARMAZENAMENTO_EQUIPAMENTOS = new ArrayList<>();
-        
+    
 }
