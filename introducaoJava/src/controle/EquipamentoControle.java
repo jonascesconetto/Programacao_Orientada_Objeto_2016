@@ -5,12 +5,13 @@
  */
 package controle;
 
-import armazenamento.MeioArmazenamento;
+//import armazenamento.MeioArmazenamento;
 import java.util.ArrayList;
 import java.util.Date;
 import modelo.Equipamento;
 import modelo.EquipamentoDao;
 import modelo.Manutencao;
+import modelo.ManutencaoDao;
 
 /**
  *
@@ -48,6 +49,7 @@ public class EquipamentoControle {
         novaManutencao.setValor(valor);
         //adicionar o objeto encapsulado em uma posição do vetor manutenções de um equipamento (selecionado)
         encontrado.adicionaManutencao(novaManutencao);
+        ManutencaoDao.salvar(encontrado);
     }
     
 }

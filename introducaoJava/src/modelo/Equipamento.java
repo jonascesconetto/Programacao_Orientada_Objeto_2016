@@ -6,7 +6,7 @@
 package modelo;
 
 import java.util.Date;
-import armazenamento.MeioArmazenamento;
+//import armazenamento.MeioArmazenamento;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.nio.file.Files;
@@ -36,6 +36,10 @@ public class Equipamento {
     }
      
     //criar um metodo para acessar as manutenções em uma outra classe
+    public void setListaManutencoes(ArrayList<Manutencao> listaManutencoes){
+        this.listaManutencoes = listaManutencoes;
+    }
+    
     public ArrayList<Manutencao> getListaManutencoes(){
         return this.listaManutencoes;
     }
