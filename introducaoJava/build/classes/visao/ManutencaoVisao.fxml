@@ -7,13 +7,18 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visao.ManutencaoVisao">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visao.ManutencaoVisao">
    <children>
       <VBox layoutX="150.0" layoutY="107.0" prefHeight="400.0" prefWidth="400.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label text="CADASTRO DE MANUTENÇÃO DO EQUIPAMENTO " />
+            <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="360.0">
+               <children>
+                  <Label text="CADASTRO DE MANUTENÇÃO DO EQUIPAMENTO " />
+               </children>
+            </HBox>
             <Label text="Equipamento" />
             <ComboBox fx:id="combBoxEquipamentos" prefWidth="150.0" />
             <Label text="Descriçao" />
@@ -22,7 +27,15 @@
             <DatePicker fx:id="datePicker" />
             <Label text="Valor" />
             <TextField fx:id="txtValor" />
-            <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#onClickCadastrar" text="Salvar" />
+            <HBox prefHeight="51.0" prefWidth="360.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#onClickCancelar" text="Cancelar" />
+                  <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#onClickCadastrar" text="Salvar" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+            </HBox>
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

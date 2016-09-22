@@ -33,7 +33,7 @@ public class Principal extends Application{
      @Override
      public void start(Stage palco) throws Exception {
          
-         palco.setTitle("Equipamento/Manutenção");
+         palco.setTitle("CONTROLE DE MANUTENÇAO DE EQUIPAMENTOS");
          //Abre o FXML
          //Pane principal = FXMLLoader.load(getClass().getResource("visao/EquipamentoVisao.fxml"));
          //Pane principal = FXMLLoader.load(getClass().getResource("visao/ManutencaoVisao.fxml"));
@@ -42,7 +42,7 @@ public class Principal extends Application{
          
          palco.setScene(cena);
          palco.setWidth(400);
-         palco.setHeight(400);
+         palco.setHeight(600);
          palco.show();
      }
 }  

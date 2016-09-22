@@ -4,17 +4,24 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="visao.Menu">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visao.Menu">
    <children>
-      <VBox layoutX="61.0" layoutY="48.0" prefHeight="400.0" prefWidth="400.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox layoutX="61.0" layoutY="48.0" prefHeight="600.0" prefWidth="400.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label text="Castrar Equipamento / Manutençao" />
+            <HBox alignment="TOP_CENTER" prefHeight="4.0" prefWidth="360.0">
+               <children>
+                  <Label text="MENU">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
             <Button fx:id="btnCadEquipamento" mnemonicParsing="false" onAction="#abrirTelaEquipamento" text="Cadastrar Equipamento" />
             <Button fx:id="btnCadManutencao" mnemonicParsing="false" onAction="#abrirTelaManutencoes" text="Cadastrar Manutençoes" />
-            <Button fx:id="btnFechar" mnemonicParsing="false" onAction="#fecharPrograma" text="Fechar" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

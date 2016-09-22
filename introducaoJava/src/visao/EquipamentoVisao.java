@@ -6,16 +6,21 @@
 package visao;
 
 import controle.EquipamentoControle;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 /**
  *
@@ -38,20 +43,49 @@ public class EquipamentoVisao implements Initializable{
         
     }
     
-    public void onClickCadastrar( ActionEvent event){
+    public void onClickCadastrar( ActionEvent event)throws IOException{
         
+        //Recebe parametros para armazenar
         String nome = txtNomeEquipamento.getText();
         String patrimonio = txtNumeroPatrimonio.getText();
         float valor = Float.parseFloat(txtValor.getText());
         Date dataAquisicao = new Date();
         Date dataTerminoGarantia = new Date();
+        //ENVIO DOS PARAMETROS
         EquipamentoControle.receberDadosCadstroEquipamentos(nome, patrimonio, dataAquisicao, dataTerminoGarantia, valor);
-        
+              
+        //Mensagem de alerta
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Mensagem");
+        alert.setTitle("CADASTRO EQUIPAMENTO");
         alert.setHeaderText(null);
-        alert.setContentText("Cadastro concluido com sucesso!!!");
+        alert.setContentText("Cadastro realizado com sucesso!!!");
         alert.showAndWait();
+        
+        //voltar para o menu
+        Button bt = (Button) event.getSource();
+        //bt.getScene().getWindow()
+        Scene cenaAntual = bt.getScene();
+        Stage palcoAtual = (Stage) cenaAntual.getWindow();           
+        Pane elementoNovoPalco = FXMLLoader.load(getClass().getResource("Menu.fxml"));
+        Scene cena = new Scene(elementoNovoPalco);
+        palcoAtual.setScene(cena);
+        palcoAtual.show();
+        System.out.println("CADASTRO EQUIPAMENTO para MENU");
+    
+    }
+    
+     public void onClickCancelar( ActionEvent event)throws IOException{
+        
+        //voltar para o menu
+        Button bt = (Button) event.getSource();
+        //bt.getScene().getWindow()
+        Scene cenaAntual = bt.getScene();
+        Stage palcoAtual = (Stage) cenaAntual.getWindow();           
+        Pane elementoNovoPalco = FXMLLoader.load(getClass().getResource("Menu.fxml"));
+        Scene cena = new Scene(elementoNovoPalco);
+        palcoAtual.setScene(cena);
+        palcoAtual.show();
+        System.out.println("CADASTRO EQUIPAMENTO para MENU");
     
     }
 

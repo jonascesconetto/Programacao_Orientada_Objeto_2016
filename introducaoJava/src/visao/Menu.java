@@ -22,9 +22,6 @@ import javafx.stage.Stage;
  * @author jonas
  */
 public class Menu implements Initializable{
-
-    @FXML
-    
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -42,11 +39,20 @@ public class Menu implements Initializable{
         Scene cena = new Scene(elementoNovoPalco);
         palcoAtual.setScene(cena);
         palcoAtual.show();
-        System.out.println("oi");
+        System.out.println("MENU para CADASTRO EQUIPAMENTO");
     }
     
-    public void abrirTelaManutencoes(){
-        System.out.println("ae");
+    public void abrirTelaManutencoes(ActionEvent e) throws IOException{
+        Button bt = (Button) e.getSource();
+        //bt.getScene().getWindow()
+        Scene cenaAntual = bt.getScene();
+        Stage palcoAtual = (Stage) cenaAntual.getWindow();
+                
+        Pane elementoNovoPalco = FXMLLoader.load(getClass().getResource("ManutencaoVisao.fxml"));
+        Scene cena = new Scene(elementoNovoPalco);
+        palcoAtual.setScene(cena);
+        palcoAtual.show();
+        System.out.println("MENU para CADASTRO MANUTENCOES");
     }
     
     public void fecharPrograma(){
