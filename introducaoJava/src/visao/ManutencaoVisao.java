@@ -5,12 +5,15 @@
  */
 package visao;
 
+import controle.ItemComboEquipamento;
 import controle.EquipamentoControle;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.Scanner;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,6 +22,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import modelo.Equipamento;
 
 /**
  *
@@ -41,20 +45,21 @@ public class ManutencaoVisao implements Initializable{
     
     @Override 
     public void initialize(URL url, ResourceBundle rb){
-        
+        ObservableList<ItemComboEquipamento> itens = ItemComboEquipamento.buscarItems();
+        combBoxEquipamentos.setItems(itens);
+        combBoxEquipamentos.getSelectionModel().selectFirst();
     }
         
       
     public void onClickCadastrar( ActionEvent event){
         
-        String nome = txtNomeEquipamento.getText();
-        Equipamento encontrado = EquipamentoControle.obterEquipamentoPeloNumeroDoPatrimonio(valorEntrada)
+        ItemComboEquipamento item = (ItemComboEquipamento) combBoxEquipamentos.getSelectionModel().getSelectedItem();
                 
         String descricao = txtDescricao.getText();
         Date data = new Date();
         float valor = Float.parseFloat(txtValor.getText());
         
-        EquipamentoControle.receberDadosNovaManutencao(numeroPatrimonio, descricao, data, valor);
+        EquipamentoControle.receberDadosNovaManutencao(item.getPatrimonio(), descricao, data, valor);
         
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("MANUTENÇÃO");
@@ -62,6 +67,7 @@ public class ManutencaoVisao implements Initializable{
         alert.setContentText("Cadastro realizado com sucesso!!!");
         alert.showAndWait();
     }
+
 }
 
 /*public class ManutencaoVisao {

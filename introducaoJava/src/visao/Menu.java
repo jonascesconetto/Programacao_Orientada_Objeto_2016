@@ -5,16 +5,58 @@
  */
 package visao;
 
-import java.util.Scanner;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 /**
  *
  * @author jonas
  */
-public class Menu {
+public class Menu implements Initializable{
+
+    @FXML
     
-    //preciso cria um método para criar um menu
-    public static void exibirMenu(){
+    
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
+    
+    //action faz relação ao evento do botão precionado
+    public void abrirTelaEquipamento(ActionEvent e) throws IOException{ 
+        Button bt = (Button) e.getSource();
+        //bt.getScene().getWindow()
+        Scene cenaAntual = bt.getScene();
+        Stage palcoAtual = (Stage) cenaAntual.getWindow();
+                
+        Pane elementoNovoPalco = FXMLLoader.load(getClass().getResource("EquipamentoVisao.fxml"));
+        Scene cena = new Scene(elementoNovoPalco);
+        palcoAtual.setScene(cena);
+        palcoAtual.show();
+        System.out.println("oi");
+    }
+    
+    public void abrirTelaManutencoes(){
+        System.out.println("ae");
+    }
+    
+    public void fecharPrograma(){
+        System.out.println("eeeeee");
+    }
+   
+}
+
+ //preciso cria um método para criar um menu
+    /*public static void exibirMenu(){
 	do{
             System.out.println("=== MENU PRINCIAPL ===");
             
@@ -50,13 +92,12 @@ public class Menu {
 
             //ok, agora se ele digitar uma opcao valida para seu programa
 
-            if(opcao == 1){
-                EquipamentoVisao.exibirFormularioCadastroEquipamento();
-            }else if(opcao == 2){
-                EquipamentoVisao.exibirListagemEquipamentos();
-            }else{
+            //if(opcao == 1){
+            //    EquipamentoVisao.exibirFormularioCadastroEquipamento();
+            //}else if(opcao == 2){
+            //    EquipamentoVisao.exibirListagemEquipamentos();
+            //}else{
                 System.exit(0);
             }
         }while(true);
-    }
-}
+    }*/

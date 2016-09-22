@@ -36,8 +36,8 @@ public class Principal extends Application{
          palco.setTitle("Equipamento/Manutenção");
          //Abre o FXML
          //Pane principal = FXMLLoader.load(getClass().getResource("visao/EquipamentoVisao.fxml"));
-         Pane principal = FXMLLoader.load(getClass().getResource("visao/ManutencaoVisao.fxml"));
-         
+         //Pane principal = FXMLLoader.load(getClass().getResource("visao/ManutencaoVisao.fxml"));
+         Pane principal = FXMLLoader.load(getClass().getResource("visao/Menu.fxml"));
          Scene cena = new Scene(principal);
          
          palco.setScene(cena);
