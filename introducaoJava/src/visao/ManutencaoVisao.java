@@ -6,15 +6,65 @@
 package visao;
 
 import controle.EquipamentoControle;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.ResourceBundle;
 import java.util.Scanner;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 
 /**
  *
  * @author jonas
  */
-public class ManutencaoVisao {
+
+public class ManutencaoVisao implements Initializable{
+       
+    @FXML
+    ComboBox combBoxEquipamentos;
+    
+    @FXML
+    TextField txtDescricao, txtValor;
+    
+    @FXML        
+    DatePicker datePicker;
+    
+    @FXML
+    Button btnSalvar;
+    
+    @Override 
+    public void initialize(URL url, ResourceBundle rb){
+        
+    }
+        
+      
+    public void onClickCadastrar( ActionEvent event){
+        
+        String nome = txtNomeEquipamento.getText();
+        Equipamento encontrado = EquipamentoControle.obterEquipamentoPeloNumeroDoPatrimonio(valorEntrada)
+                
+        String descricao = txtDescricao.getText();
+        Date data = new Date();
+        float valor = Float.parseFloat(txtValor.getText());
+        
+        EquipamentoControle.receberDadosNovaManutencao(numeroPatrimonio, descricao, data, valor);
+        
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("MANUTENÇÃO");
+        alert.setHeaderText(null);
+        alert.setContentText("Cadastro realizado com sucesso!!!");
+        alert.showAndWait();
+    }
+}
+
+/*public class ManutencaoVisao {
     
     public static void exibirFormularioCadastroManutencao(String numeroPatrimonio){
         Scanner entrada = new Scanner( System.in );
@@ -51,4 +101,4 @@ public class ManutencaoVisao {
         
     }
     
-}
+}*/

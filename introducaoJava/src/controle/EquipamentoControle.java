@@ -8,6 +8,7 @@ package controle;
 //import armazenamento.MeioArmazenamento;
 import java.util.ArrayList;
 import java.util.Date;
+import javafx.fxml.Initializable;
 import modelo.Equipamento;
 import modelo.EquipamentoDao;
 import modelo.Manutencao;

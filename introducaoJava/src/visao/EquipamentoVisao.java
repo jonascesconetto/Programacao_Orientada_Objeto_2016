@@ -6,19 +6,56 @@
 package visao;
 
 import controle.EquipamentoControle;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.net.URL;
 import java.util.Date;
-import java.util.Scanner;
-import modelo.Equipamento;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 
 /**
  *
  * @author jonas
  */
-public class EquipamentoVisao {
-    public static void exibirFormularioCadastroEquipamento() {
+
+public class EquipamentoVisao implements Initializable{
+         
+    @FXML
+    TextField txtNomeEquipamento, txtNumeroPatrimonio, txtValor;
+    
+    @FXML
+    DatePicker datePickerAquisicao, datePickerTerminoGarantia;
+    
+    @FXML
+    Button btnSalvar;
+    
+    @Override 
+    public void initialize(URL url, ResourceBundle rb){
         
+    }
+    
+    public void onClickCadastrar( ActionEvent event){
+        
+        String nome = txtNomeEquipamento.getText();
+        String patrimonio = txtNumeroPatrimonio.getText();
+        float valor = Float.parseFloat(txtValor.getText());
+        Date dataAquisicao = new Date();
+        Date dataTerminoGarantia = new Date();
+        EquipamentoControle.receberDadosCadstroEquipamentos(nome, patrimonio, dataAquisicao, dataTerminoGarantia, valor);
+        
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Mensagem");
+        alert.setHeaderText(null);
+        alert.setContentText("Cadastro concluido com sucesso!!!");
+        alert.showAndWait();
+    
+    }
+
+    /*public static void exibirFormularioCadastroEquipamento() {
         //variaveis do sistema
         Scanner entrada = new Scanner (System.in);
         String nome, patrimonio;
@@ -78,21 +115,19 @@ public class EquipamentoVisao {
         //Unir a camada visão com a camada do controle
         EquipamentoControle.receberDadosCadstroEquipamentos(nome, patrimonio, dataAquisicao, dataTerminoGarantia, valor);
         Menu.exibirMenu();
-                
-    }
+    }*/
     
-    public static void exibirListagemEquipamentos(){
+    /*public static void exibirListagemEquipamentos(){
         
         System.out.println("=== TELA DE LISTAGEM DE EQUIPAMENTOS ===");
         System.out.println("NOME:\t\t|\tNÚMERO PATRIMONIO\t|\tNÚMERO MANUTENÇÕES\t|\tTOTAL GASTO MANUTENÇÕES");
         
-        /*
-        ArrayList<Equipamento> lista = EquipamentoControle.obterListaEquipamentos();       
-        for (int i=0; i<lista.size(); i++){
-            System.out.println(lista.get(i).getNome()+"\t"+lista.get(i).getDataAquisicao());        
-        }
-        */
         
+        //ArrayList<Equipamento> lista = EquipamentoControle.obterListaEquipamentos();       
+        //for (int i=0; i<lista.size(); i++){
+        //    System.out.println(lista.get(i).getNome()+"\t"+lista.get(i).getDataAquisicao());        
+        //}
+            
         for (Equipamento obj : EquipamentoControle.obterListaEquipamentos()){
             System.out.println(obj.getNome()+"\t\t|\t"+obj.getPatrimonio()+"\t\t\t|\t"+obj.getListaManutencoes().size()+ "\t\t\t|\t " + obj.getTotalGastoManutencao());        
         }
@@ -118,7 +153,7 @@ public class EquipamentoVisao {
             }
         }
         
-    }
+    }*/
 }
 
 
