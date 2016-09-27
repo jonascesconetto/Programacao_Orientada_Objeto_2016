@@ -9,11 +9,8 @@ import controle.ItemComboEquipamento;
 import controle.EquipamentoControle;
 import java.io.IOException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
-import java.util.Scanner;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,7 +24,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import modelo.Equipamento;
 
 /**
  *
@@ -62,7 +58,9 @@ public class ManutencaoVisao implements Initializable{
         //chamada combobox
         ItemComboEquipamento item = (ItemComboEquipamento) combBoxEquipamentos.getSelectionModel().getSelectedItem();     
         String descricao = txtDescricao.getText();
+        
         Date data = new Date();
+        
         float valor = Float.parseFloat(txtValor.getText());
         
         //ENVIO DOS PARAMETROS

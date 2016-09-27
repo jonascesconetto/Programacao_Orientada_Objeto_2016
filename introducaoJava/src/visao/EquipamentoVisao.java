@@ -8,6 +8,9 @@ package visao;
 import controle.EquipamentoControle;
 import java.io.IOException;
 import java.net.URL;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -46,11 +49,22 @@ public class EquipamentoVisao implements Initializable{
     public void onClickCadastrar( ActionEvent event)throws IOException{
         
         //Recebe parametros para armazenar
+        //algumas conversões são necessárias
         String nome = txtNomeEquipamento.getText();
         String patrimonio = txtNumeroPatrimonio.getText();
         float valor = Float.parseFloat(txtValor.getText());
-        Date dataAquisicao = new Date();
-        Date dataTerminoGarantia = new Date();
+        
+        //Converção datePicker para um Date
+        LocalDate dataAquisicaoLocalizada = datePickerAquisicao.getValue();
+        Instant instanteDoInicioDoDiaDaDataAquisisao = Instant.from(dataAquisicaoLocalizada.atStartOfDay(ZoneId.systemDefault()));
+        Date dataAquisicao = Date.from(instanteDoInicioDoDiaDaDataAquisisao);
+        //Converção datePicker para um Date
+        LocalDate dataTerminoGarantiaLocalizada = datePickerTerminoGarantia.getValue();
+        Instant instanteDoInicioDoDiaDaDataTerminoGarantia = Instant.from(dataTerminoGarantiaLocalizada.atStartOfDay(ZoneId.systemDefault()));
+        Date dataTerminoGarantia = Date.from(instanteDoInicioDoDiaDaDataTerminoGarantia);
+        
+        //Fazer uma validação aqui com um alerta DANGER
+        
         //ENVIO DOS PARAMETROS
         EquipamentoControle.receberDadosCadstroEquipamentos(nome, patrimonio, dataAquisicao, dataTerminoGarantia, valor);
               
@@ -59,9 +73,9 @@ public class EquipamentoVisao implements Initializable{
         alert.setTitle("CADASTRO EQUIPAMENTO");
         alert.setHeaderText(null);
         alert.setContentText("Cadastro realizado com sucesso!!!");
-        alert.showAndWait();
+        alert.showAndWait();//esperar o click do OK!!
         
-        //voltar para o menu
+        //ALTERAÇÃO DA  TELA voltar para o menu
         Button bt = (Button) event.getSource();
         //bt.getScene().getWindow()
         Scene cenaAntual = bt.getScene();
