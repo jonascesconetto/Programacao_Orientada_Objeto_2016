@@ -5,11 +5,8 @@
  */
 package modelo;
 
-import armazenamento.MeioArmazenamento;
 import controle.ProblemaControle;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.LineNumberReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -17,8 +14,6 @@ import java.nio.file.StandardOpenOption;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
 
 /**
  *
@@ -36,7 +31,7 @@ public class ProblemaDao {
         return null;
     }
     
-    //Obter lista apartir do arquivo
+    //Obter lista apartir do vetor
     public static ArrayList<Problema> obterLista(){
         //para o retorno
         ArrayList<Problema> retorno = new ArrayList<>();
@@ -45,7 +40,6 @@ public class ProblemaDao {
         try{
             //iterar todas as linha do arquivo
             for( String linha : Files.readAllLines(caminhoArquivo) ){
-                
                 String[] parts = linha.split(";");
                 Problema problemaVez = new Problema();
                 DateFormat formatadorData = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy");//, Locale.US);
@@ -96,8 +90,7 @@ public class ProblemaDao {
             }else{ 
                 obj.setSituacao(situacaoAtual);
                 vetorTemporario.add(obj);
-            }    
-        
+            }  
         }
         
         Path caminhoArquivo = Paths.get("armazenamento/problemas.txt");
@@ -113,8 +106,6 @@ public class ProblemaDao {
                 System.out.println(e.getMessage());
             }
         }
-        
-        
     }
     
     public static void salvar(Problema salvarEquipamento){

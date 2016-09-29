@@ -8,6 +8,7 @@ package visao;
 import armazenamento.MeioArmazenamento;
 import modelo.Problema;
 import controle.ProblemaControle;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -66,7 +67,7 @@ public class ProblemaVisao {
         Menu.exibirMenu();
     }
     
-    public static void exibirListagemProblemas(){
+    public static void exibirListagemProblemas() throws IOException{
         //LISTAGEM DO SISTEMA
             
         System.out.println(" ==== LISTAGEM DE PROBLEMAS ====");
@@ -110,7 +111,8 @@ public class ProblemaVisao {
             } else {
                 //encontrado.setSituacao("Resolvido");
                  
-                test.alteraSituacao(Integer.parseInt(valorEntrada));
+                test.alteraSituacao(Integer.parseInt(valorEntrada));//(Integer.parseInt(valorEntrada));
+                
                 System.out.println("Problema Resolvido !!!\n");
             }
         }
