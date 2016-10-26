@@ -1,0 +1,207 @@
+<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--Salvar EM??-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/View_left"
+                android:paddingRight="@dimen/View_right"
+                >
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/iconeLocalArmazenamento"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/ic_android_black_24dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_margin="@dimen/Margem_Separa_Icon_Text"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Salvar em"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="rudimar@univali.br"
+                            />
+                    </LinearLayout>
+
+                    <Spinner
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        >
+
+                    </Spinner>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <!--Nome do Contato-->
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/View_left"
+                android:paddingRight="@dimen/View_right"
+                android:rowCount="1"
+                android:columnCount="2"
+                >
+
+                <ImageView android:id="@+id/iconeNome"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/ic_android_black_24dp"
+                    />
+
+                <EditText android:id="@+id/txt_nome"
+                    android:hint="@string/txt_nome"
+                    android:inputType="textCapSentences|textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/Margem_Separa_Icon_Text"
+                    />
+
+            </GridLayout>
+
+            <!--Sobrenome do Contato-->
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/View_left"
+                android:paddingRight="@dimen/View_right"
+                android:rowCount="1"
+                android:columnCount="2"
+                >
+
+                <ImageView
+                    android:id="@+id/iconeSobrenome"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/ic_android_black_24dp"
+                    />
+
+                <EditText android:id="@+id/txt_sobrenome"
+                    android:hint="@string/txt_sobrenome"
+                    android:inputType="textCapSentences|textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/Margem_Separa_Icon_Text"
+                    />
+
+            </GridLayout>
+
+            <!--Telefones-->
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/View_left"
+                android:paddingRight="@dimen/View_right"
+                android:rowCount="1"
+                android:columnCount="2"
+                >
+
+                <ImageView
+                    android:id="@+id/iconeTelefone"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/ic_android_black_24dp"
+                    />
+
+                <EditText android:id="@+id/txt_telefone"
+                    android:hint="@string/txt_telefone"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/Margem_Separa_Icon_Text"
+                    />
+            </GridLayout>
+
+            <!-- Tipo -->
+
+            <!--Email-->
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/View_left"
+                android:paddingRight="@dimen/View_right"
+                android:rowCount="1"
+                android:columnCount="2"
+                >
+
+                <ImageView
+                    android:id="@+id/iconeEmail"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/ic_android_black_24dp"
+                    />
+
+                <EditText android:id="@+id/txt_email"
+                    android:hint="@string/txt_email"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/Margem_Separa_Icon_Text"
+                    />
+
+            </GridLayout>
+
+            <!-- Tipo -->
+
+            <!-- Mais Campos-->
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/View_left"
+                android:paddingRight="@dimen/View_right"
+                android:rowCount="1"
+                android:columnCount="2"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="            "
+                    android:textColor="#0080FF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/label_Mais_Campos"
+                    android:textColor="#0080FF" />
+
+            </GridLayout>
+
+            <!--Button android:id="@+id/btn_salvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_salvar" /-->
+            
+        </LinearLayout>

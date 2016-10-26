@@ -34,14 +34,18 @@ public class ManutencaoDao {
             if(localManutencoes.toFile().exists()){
                 for( String linhaManutencao : Files.readAllLines(localManutencoes)){
                     //Quebra dos separadores
-                    String[] partsManutencoes = linhaManutencao.split(";");
+                    String partsManutencoes[] = linhaManutencao.split(";");
+                    
                     Manutencao manutencaoDaVez = new Manutencao();
+                    
                     manutencaoDaVez.setDescricao(partsManutencoes[0]);
                     
                     DateFormat formatador = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy");
                     
                     manutencaoDaVez.setData(formatador.parse(partsManutencoes[1]));
+                    
                     manutencaoDaVez.setValor(Float.parseFloat(partsManutencoes[2]));
+                    
                     retorno.add(manutencaoDaVez);
                 }
             }
@@ -63,7 +67,7 @@ public class ManutencaoDao {
             manutencoesString = manutencoesString + manutencao.getDescricao()+";"+manutencao.getData()+";"+manutencao.getValor()+separadorLinha;
         }
         //http://stackoverflow.com/questions/19794101/how-to-overwrite-file-via-java-nio-writer
-        Files.write(local, manutencoesString.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        Files.write(local, manutencoesString.getBytes());
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

@@ -7,15 +7,7 @@ package modelo;
 
 import java.util.Date;
 //import armazenamento.MeioArmazenamento;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.logging.Logger;
 
 /**
  *

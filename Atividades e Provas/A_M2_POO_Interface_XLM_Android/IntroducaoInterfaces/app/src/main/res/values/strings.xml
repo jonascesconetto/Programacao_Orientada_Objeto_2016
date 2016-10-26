@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Contatos Exemplo</string>
+
+    <string name="txt_nome">Nome</string>>
+    <string name="txt_sobrenome">Sobrenome</string>
+    <string name="txt_idade">Idade</string>
+    <string name="txt_sexo">Sexo</string>
+    <string name="txt_telefone">Telefone</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_salvarEm">Salvar em:</string>
+
+    <string name="label_Mais_Campos">Mais Campos</string>
+
+    <string name="radio_masculino">Masculino</string>
+    <string name="radio_feminino">Feminino</string>
+
+    <string name="txt_salvar_em">Salvar em</string>
+
+    <string name="btn_salvar">Salvar</string>
+
+</resources>

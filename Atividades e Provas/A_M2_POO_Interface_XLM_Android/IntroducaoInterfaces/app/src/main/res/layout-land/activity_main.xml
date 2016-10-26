@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="horizontal"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Imagem do Contato-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/rect3366"
+        android:layout_weight="2"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!--Imagem do Contato-->
+
+
+
+            <!--Salvar EM??-->
+            <!--TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <TableRow>
+                    <ImageView
+                        android:id="@+id/iconeLocalArmazenamento"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/ic_android_black_24dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_margin="@dimen/Margem_Separa_Icon_Text"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Salvar em"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="rudimar@univali.br"
+                            />
+                    </LinearLayout>
+
+                    <Spinner
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        >
+
+                    </Spinner>
+
+                </TableRow>
+
+            </TableLayout-->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <TableRow>
+                    <ImageView android:id="@+id/iconeLocalArmazenamento"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/ic_account_circle_black_24dp"
+                        />
+
+                    <LinearLayout
+
+                        android:orientation="vertical"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_width="wrap_content"
+                        android:layout_weight="5"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/txt_salvar_em"
+                            android:textSize="18dp"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="rudimar@univali.br"
+                            />
+                    </LinearLayout>
+
+                    <Spinner
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        >
+
+                    </Spinner>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <!--Nome do Contato-->
+            <!--TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/View_left"
+                android:paddingRight="@dimen/View_right"
+                >
+                <TableRow>
+                    <ImageView android:id="@+id/iconeNome"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/ic_android_black_24dp"
+                        />
+                    <LinearLayout
+                        android:layout_margin="@dimen/Margem_Separa_Icon_Text"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        >
+                        <EditText android:id="@+id/txt_nome"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/txt_nome"
+                            android:inputType="textCapSentences|textPersonName"
+                            />
+                    </LinearLayout>
+                    <Spinner
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        >
+                    </Spinner>
+                </TableRow>
+            </TableLayout-->
+            <TableLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <TableRow>
+                    <ImageView android:id="@+id/iconeNome"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/ic_person_black_24dp"
+                        />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        >
+                        <EditText android:id="@+id/txt_nome"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/txt_nome"
+                            android:inputType="textCapSentences|textPersonName"
+                            />
+                    </LinearLayout>
+                    <Spinner
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        >
+                    </Spinner>
+                </TableRow>
+            </TableLayout>
+
+            <!--Telefones-->
+            <!--GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/View_left"
+                android:paddingRight="@dimen/View_right"
+                android:rowCount="2"
+                android:columnCount="3"
+                >
+
+                <ImageView
+                    android:id="@+id/iconeTelefone"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/ic_android_black_24dp"
+                    />
+
+                <EditText android:id="@+id/txt_telefone"
+                    android:hint="@string/txt_telefone"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/Margem_Separa_Icon_Text"
+                    />
+            </GridLayout-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+
+                >
+                <TableRow>
+                    <ImageView android:id="@+id/iconeTelefone"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/ic_call_black_24dp"
+                        />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        >
+                        <EditText android:id="@+id/txt_Telefone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/txt_telefone"
+                            android:inputType="textCapSentences|textPersonName"
+                            />
+                    </LinearLayout>
+
+                </TableRow>
+                <TableRow>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        >
+                        <EditText android:id="@+id/txt_TipoTelefone"
+                            android:layout_marginLeft="52dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Celular"
+                            android:inputType="textCapSentences|textPersonName"
+                            />
+                    </LinearLayout>
+                    <Spinner
+                        android:layout_marginRight="150dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        >
+                    </Spinner>
+                </TableRow>
+            </TableLayout>
+
+            <!--Email-->
+            <!--GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/View_left"
+                android:paddingRight="@dimen/View_right"
+                android:rowCount="1"
+                android:columnCount="2"
+                >
+                <ImageView
+                    android:id="@+id/iconeEmail"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/ic_android_black_24dp"
+                    />
+                <EditText android:id="@+id/txt_email"
+                    android:hint="@string/txt_email"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/Margem_Separa_Icon_Text"
+                    />
+            </GridLayout-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+                <TableRow>
+                    <ImageView android:id="@+id/iconeEmail"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/ic_email_black_24dp"
+                        />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        >
+                        <EditText android:id="@+id/txt_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/txt_email"
+                            android:inputType="textCapSentences|textPersonName"
+                            />
+                    </LinearLayout>
+
+                </TableRow>
+                <TableRow>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        >
+                        <EditText android:id="@+id/txt_TipoEmail"
+                            android:layout_marginLeft="52dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Residencial"
+                            android:inputType="textCapSentences|textPersonName"
+                            />
+                    </LinearLayout>
+                    <Spinner
+                        android:layout_marginRight="150dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        >
+                    </Spinner>
+                </TableRow>
+            </TableLayout>
+            <!-- Tipo -->
+
+            <!-- Mais Campos-->
+            <!--GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/View_left"
+                android:paddingRight="@dimen/View_right"
+                android:rowCount="1"
+                android:columnCount="2"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="            "
+                    android:textColor="#0080FF" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/label_Mais_Campos"
+                    android:textColor="#0080FF" />
+            </GridLayout-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+                <TableRow>
+                    <ImageView android:id="@+id/maisCampos"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="left|center"
+
+                        />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/label_Mais_Campos"
+                            android:textColor="#0080FF" />
+                    </LinearLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+
+            <!--Botão Salvar: provisorio, não aprendi ainda a colocar na parte superior-->
+            <Button android:id="@+id/btn_salvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_salvar" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

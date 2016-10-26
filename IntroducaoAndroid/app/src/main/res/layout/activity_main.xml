@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/MainActivity"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingBottom="@dimen/bottom"
+    android:paddingLeft="@dimen/left"
+    android:paddingRight="@dimen/right"
+    android:paddingTop="@dimen/top"
+
+    tools:context="com.cesco.introducaoandroid.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_nome"/>
+
+                <EditText android:id="@+id/etNome"
+
+                    android:inputType="textCapSentences|textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_sobrenome"/>
+
+                <EditText android:id="@+id/etSobrenome"
+
+                    android:inputType="textCapSentences|textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_idade"/>
+
+                <EditText android:id="@+id/etIdade"
+
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_sexo"/>
+
+                <RadioGroup android:id="@+id/radioGroupSexo"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton android:id="@+id/radioButtonMasculino"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/radio_masculino"
+                        android:textColor="#0000FF"
+                        android:layout_weight="1"/>
+
+                    <RadioButton android:id="@+id/radioButtonFeminino"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/radio_feminino"
+                        android:textColor="#FF0000"
+                        android:layout_weight="1"/>
+                </RadioGroup>
+
+                <Button android:id="@+id/btnSalvar"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_salvar"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

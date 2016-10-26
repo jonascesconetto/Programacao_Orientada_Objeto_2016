@@ -1,0 +1,21 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--Linear Layout-->
+    <dimen name="top">0dp</dimen>
+    <dimen name="left">0dp</dimen>
+    <dimen name="right">0dp</dimen>
+    <dimen name="bottom">0dp</dimen>
+
+    <!--Dentro do Scroll View-->
+    <dimen name="View_top">20dp</dimen>
+    <dimen name="View_left">20dp</dimen>
+    <dimen name="View_right">20dp</dimen>
+    <dimen name="View_bottom">20dp</dimen>
+
+    <!--Margens Interna APP-->
+    <dimen name="Margem_Separa_Icon_Text">25dp</dimen>
+
+</resources>

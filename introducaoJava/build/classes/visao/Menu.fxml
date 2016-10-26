@@ -22,6 +22,7 @@
             </HBox>
             <Button fx:id="btnCadEquipamento" mnemonicParsing="false" onAction="#abrirTelaEquipamento" text="Cadastrar Equipamento" />
             <Button fx:id="btnCadManutencao" mnemonicParsing="false" onAction="#abrirTelaManutencoes" text="Cadastrar Manutençoes" />
+            <Button fx:id="btnListarEquipamentos" mnemonicParsing="false" onAction="#abrirListaEquipamentos" text="Listar Equipamentos" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

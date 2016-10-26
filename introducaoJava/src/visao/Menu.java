@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
@@ -55,10 +54,19 @@ public class Menu implements Initializable{
         System.out.println("MENU para CADASTRO MANUTENCOES");
     }
     
-    public void fecharPrograma(){
-        System.out.println("eeeeee");
+     public void abrirListaEquipamentos(ActionEvent e) throws IOException{
+        Button bt = (Button) e.getSource();
+        //bt.getScene().getWindow()
+        Scene cenaAntual = bt.getScene();
+        Stage palcoAtual = (Stage) cenaAntual.getWindow();
+                
+        Pane elementoNovoPalco = FXMLLoader.load(getClass().getResource("EquipamentoListagemVisao.fxml"));
+        Scene cena = new Scene(elementoNovoPalco);
+        palcoAtual.setScene(cena);
+        palcoAtual.show();
+        System.out.println("MENU para LISTA EQUIPAMENTOS");
     }
-   
+    
 }
 
  //preciso cria um método para criar um menu
