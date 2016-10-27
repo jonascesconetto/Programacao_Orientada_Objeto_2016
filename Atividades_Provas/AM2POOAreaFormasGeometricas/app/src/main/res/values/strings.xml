@@ -1,0 +1,28 @@
+<resources>
+    <!--App Nome-->
+    <string name="app_name">Área de Formas Geométricas</string>
+
+    <!--Text View-->
+    <string name="txtTipoFormaGeometrica">Selecione a Forma: </string>
+
+    <!-- Itens Radio Group-->
+    <string name="radioBtnRetangulo">Retângulo</string>
+    <string name="radioBtnTriangulo">Triângulo</string>
+    <string name="radioBtnCirculo">Circulo</string>
+
+    <!--Text Button-->
+    <string name="btnAvancar">Avançar</string>
+
+    <!-- Text Info Dados-->
+    <string name="txtInfoDadosCirculo">Informe o dado do circulo: </string>
+    <string name="txtInfoDadosRetangulo">Informe os dado do retângulo: </string>
+    <string name="txtInfoDadosTriangulo">Informe os dado do triângulo: </string>
+
+    <!--Text Dados-->
+    <string name="txtDadoCirculo">Raio [...] </string>
+    <string name="txtDadoRetangulo1">Base [...] </string>
+    <string name="txtDadoRetangulo2">Altura [...] </string>
+    <string name="txtDadoTriangulo1">Base [...] </string>
+    <string name="txtDadoTriangulo2">Altura [...] </string>
+
+</resources>
