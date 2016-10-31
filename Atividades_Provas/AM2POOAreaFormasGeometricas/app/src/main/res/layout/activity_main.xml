@@ -24,17 +24,27 @@
         />
 
     <RadioGroup
+
+        android:id="@+id/radioGroupSelForma"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RadioButton
+
+            android:id="@+id/radioButtonRetangulo"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/radioBtnRetangulo"
             android:textSize="@dimen/copoTexto"
+
             />
 
         <RadioButton
+
+            android:id="@+id/radioButtonTriangulo"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/radioBtnTriangulo"
@@ -42,17 +52,25 @@
             />
 
         <RadioButton
+
+            android:id="@+id/radioButtonCirculo"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/radioBtnCirculo"
             android:textSize="@dimen/copoTexto"
             />
+
     </RadioGroup>
 
     <Button
+
+        android:id="@+id/buttonAvancar"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btnAvancar"
-
+        android:onClick="clicouNoAvancar"
         />
+
 </LinearLayout>

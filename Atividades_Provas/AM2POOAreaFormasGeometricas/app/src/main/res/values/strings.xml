@@ -1,6 +1,10 @@
 <resources>
-    <!--App Nome-->
+    <!--Nome dos app e das abas-->
     <string name="app_name">Área de Formas Geométricas</string>
+    <string name="app_retangulo">Retângulo</string>
+    <string name="app_triangulo">Triângulo</string>
+    <string name="app_circulo">Circulo</string>
+    <string name="app_areaCalculo">Área</string>
 
     <!--Text View-->
     <string name="txtTipoFormaGeometrica">Selecione a Forma: </string>
@@ -12,6 +16,7 @@
 
     <!--Text Button-->
     <string name="btnAvancar">Avançar</string>
+    <string name="btnCalcular">Calcular</string>
 
     <!-- Text Info Dados-->
     <string name="txtInfoDadosCirculo">Informe o dado do circulo: </string>
