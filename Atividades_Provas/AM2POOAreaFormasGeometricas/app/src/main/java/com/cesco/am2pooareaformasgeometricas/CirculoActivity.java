@@ -43,13 +43,12 @@ public class CirculoActivity extends Activity {
 
         //colocando na sacola valor arredondado para cima
         abridor.putExtra("resultadoEnviado", arredondar(resultado,2,0));
-        abridor.putExtra("tipoDeForma", forma);
+        abridor.putExtra(AreaCalculoActivity.FORMA, forma);
 
         //iniciando outra activity
         startActivity(abridor);
     }
 
-    //  Parâmetros:
     //  Referencia:
     //  http://www.devmedia.com.br/forum/arredondar-numero-0-885650224-para-0-89/564800
     /**

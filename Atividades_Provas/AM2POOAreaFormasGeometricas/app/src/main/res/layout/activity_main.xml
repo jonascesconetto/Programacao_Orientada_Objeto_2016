@@ -6,62 +6,66 @@
 
     android:orientation="vertical"
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
     tools:context="com.cesco.am2pooareaformasgeometricas.MainActivity">
 
     <TextView
         android:paddingTop="@dimen/espacoBarraTitulo"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:text="@string/txtTipoFormaGeometrica"
         android:textStyle="bold"
         android:textSize="@dimen/titulo"
         />
 
     <RadioGroup
-
         android:id="@+id/radioGroupSelForma"
 
         android:paddingTop="@dimen/espacoTituloSelectForma"
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <RadioButton
-
             android:id="@+id/radioButtonRetangulo"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:text="@string/radioBtnRetangulo"
             android:textSize="@dimen/copoTexto"
-
             />
 
         <RadioButton
-
             android:id="@+id/radioButtonTriangulo"
 
             android:layout_marginTop="@dimen/espacoEntreOpcoesMenu"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:text="@string/radioBtnTriangulo"
             android:textSize="@dimen/copoTexto"
             />
 
         <RadioButton
-
             android:id="@+id/radioButtonCirculo"
 
             android:layout_marginTop="@dimen/espacoEntreOpcoesMenu"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:text="@string/radioBtnCirculo"
             android:textSize="@dimen/copoTexto"
             />
@@ -70,17 +74,19 @@
 
     <LinearLayout
         android:orientation="horizontal"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:gravity="end|bottom"
         >
 
         <Button
-
             android:id="@+id/buttonAvancar"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="@string/btnAvancar"
             android:onClick="clicouNoAvancar"
             />

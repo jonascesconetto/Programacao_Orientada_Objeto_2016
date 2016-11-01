@@ -25,10 +25,10 @@
     <string name="txtInfoDadosTriangulo">Informe os dado do triângulo: </string>
 
     <!--Text Dados-->
-    <string name="txtDadoCirculo">Raio [...] </string>
-    <string name="txtDadoRetangulo1">Base [...] </string>
-    <string name="txtDadoRetangulo2">Altura [...] </string>
-    <string name="txtDadoTriangulo1">Base [...] </string>
-    <string name="txtDadoTriangulo2">Altura [...] </string>
+    <string name="txtDadoCirculo">Raio do Circulo</string>
+    <string name="txtDadoRetangulo1">Base do Retângulo</string>
+    <string name="txtDadoRetangulo2">Altura do Retângulo</string>
+    <string name="txtDadoTriangulo1">Base do Triângulo</string>
+    <string name="txtDadoTriangulo2">Altura do Triângulo</string>
 
 </resources>

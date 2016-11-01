@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
     android:orientation="vertical"
 
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     >
 
     <ImageView
-
         android:id="@+id/imageViewFiguraForma"
 
-        android:paddingTop="@dimen/superiorFiguras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
 
-        android:paddingBottom="@dimen/inferiorFiguras"
+        android:layout_marginTop="@dimen/superiorFiguras"
+        android:layout_marginBottom="@dimen/inferiorFiguras"
+
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
         />
-        <!--android:src="@drawable/retangulo"-->
 
     <TextView
-
         android:id="@+id/textViewResultadoCalculado"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:text="TEST"
         android:textSize="@dimen/textSizeTextCalculo"
         android:gravity="center"
@@ -38,17 +38,19 @@
 
     <LinearLayout
         android:orientation="horizontal"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:gravity="center|bottom"
         >
 
         <Button
-
             android:id="@+id/buttonReiniciar"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="@string/btnReiniciar"
             android:onClick="clicouReiniciar"
             />

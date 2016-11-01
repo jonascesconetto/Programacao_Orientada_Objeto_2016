@@ -13,46 +13,54 @@
 
     <TextView
         android:paddingTop="@dimen/espacoBarraTitulo"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:text="@string/txtInfoDadosRetangulo"
         android:textStyle="bold"
         android:textSize="@dimen/titulo"
         />
 
     <EditText
-
         android:id="@+id/editTextBaseRetangulo"
 
         android:paddingTop="@dimen/espacoTituloInsert"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+        android:inputType="numberDecimal"
         android:hint="@string/txtDadoRetangulo1"
         />
 
     <EditText
-
         android:id="@+id/editTextAlturaRetangulo"
 
         android:paddingTop="@dimen/espacoTituloInsert"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+        android:inputType="numberDecimal"
         android:hint="@string/txtDadoRetangulo2"
         />
 
     <LinearLayout
         android:orientation="horizontal"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:gravity="end|bottom"
         >
 
         <Button
-
             android:id="@+id/buttonCalcular"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="@string/btnCalcular"
             android:onClick="clicouCalcular"
             />

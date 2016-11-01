@@ -2,8 +2,10 @@ package com.cesco.am2pooareaformasgeometricas;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,6 +16,8 @@ import android.widget.TextView;
 
 public class AreaCalculoActivity extends Activity {
 
+    public static String FORMA = "forma";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +27,7 @@ public class AreaCalculoActivity extends Activity {
         //Resultado
         double resultado = getIntent().getDoubleExtra("resultadoEnviado", -1);
         //Tipo de Forma
-        int fomaSelecionada = getIntent().getIntExtra("tipoForma", 0);
+        int fomaSelecionada = getIntent().getIntExtra(FORMA, 0);
 
         //Mostrando para o usuario resultado e imagem da forma selecionada na primeira activity
 
@@ -33,16 +37,19 @@ public class AreaCalculoActivity extends Activity {
 
         //setando os dados que serão mostrados
 
+        Log.d("TESTE", "valor " + fomaSelecionada);
+
         if (fomaSelecionada == 1){
-            imageViewFiguraForma.setImageDrawable(getDrawable(R.drawable.retangulo));
+            imageViewFiguraForma.setImageDrawable(getResources().getDrawable(R.drawable.retangulo, null));
+            //imageViewFiguraForma.setImageResource(R.drawable.retangulo);
         }
         if(fomaSelecionada == 2){
-            imageViewFiguraForma.setImageDrawable(getDrawable(R.drawable.triangulo));
+            imageViewFiguraForma.setImageDrawable(getResources().getDrawable(R.drawable.triangulo, null));
         }
         if(fomaSelecionada == 3){
-            imageViewFiguraForma.setImageDrawable(getDrawable(R.drawable.circulo));
+            imageViewFiguraForma.setImageDrawable(getResources().getDrawable(R.drawable.circulo, null));
         }
-        textViewResultadoCalculado.setText("Área = " + resultado + "cm²");
+        textViewResultadoCalculado.setText("Área = " + resultado + " cm²");
 
     }
 
