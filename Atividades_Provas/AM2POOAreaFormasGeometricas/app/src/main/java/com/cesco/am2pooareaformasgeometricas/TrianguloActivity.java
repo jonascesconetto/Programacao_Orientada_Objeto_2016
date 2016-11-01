@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by cesco on 29/10/16.
@@ -29,27 +30,30 @@ public class TrianguloActivity extends Activity {
     }
 
 
-    public void clicouCalcular (View origemDoClique){
+    public void clicouCalcular (View origemDoClique) {
         //controle da forma para fazer uma seleção da imagem em outra activity
         // 2 = triangulo
         int forma = 2;
 
-        //Mudar para outra activity
-        Intent abridor = new Intent(this.getApplicationContext(), AreaCalculoActivity.class);
+        if (editTextBaseTriangulo.getText().toString().equals("") || editTextAlturaTriangulo.getText().toString().equals("")) {
+            Toast.makeText(TrianguloActivity.this.getApplicationContext(), "Dados Vazios apresentados !", Toast.LENGTH_SHORT).show();
+        } else {
+            //Mudar para outra activity
+            Intent abridor = new Intent(this.getApplicationContext(), AreaCalculoActivity.class);
 
-        //Parametros para empacotamento
-        double base = Double.parseDouble(editTextBaseTriangulo.getText().toString());
-        double altura = Double.parseDouble(editTextAlturaTriangulo.getText().toString());
+            //Parametros para empacotamento
+            double base = Double.parseDouble(editTextBaseTriangulo.getText().toString());
+            double altura = Double.parseDouble(editTextAlturaTriangulo.getText().toString());
 
-        //  Calculo para Triangulo
-        double resultado = (base*altura)/2;
+            //  Calculo para Triangulo
+            double resultado = (base * altura) / 2;
 
-        //colocando na sacola
-        abridor.putExtra("resultadoEnviado", resultado);
-        abridor.putExtra(AreaCalculoActivity.FORMA, forma);
+            //colocando na sacola
+            abridor.putExtra("resultadoEnviado", resultado);
+            abridor.putExtra(AreaCalculoActivity.FORMA, forma);
 
-        //iniciando outra activity
-        startActivity(abridor);
+            //iniciando outra activity
+            startActivity(abridor);
+        }
     }
-
 }

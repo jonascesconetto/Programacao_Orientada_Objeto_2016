@@ -48,30 +48,35 @@ public class MainActivity extends Activity {
         int idRadioButtonSel = radioGroupSelForma.getCheckedRadioButtonId();
         RadioButton opcaoSelecionada = (RadioButton) findViewById(idRadioButtonSel);
 
-        if (opcaoSelecionada.getText().toString().equals("Retângulo")) {
-            //Caminho
-            Intent abridor = new Intent(this.getApplicationContext(), RetanguloActivity.class);
-            startActivity(abridor);
-            //Mensagem
-            Toast.makeText(MainActivity.this.getApplicationContext(), "Retângulo Selecionado", Toast.LENGTH_SHORT).show();
-        }
+        if (opcaoSelecionada==null){
+            Toast.makeText(MainActivity.this.getApplicationContext(), "Informe uma seleção valida !", Toast.LENGTH_SHORT).show();
 
-        if (opcaoSelecionada.getText().toString().equals("Triângulo")) {
-            // Caminho
-            Intent abridor = new Intent(this.getApplicationContext(), TrianguloActivity.class);
-            startActivity(abridor);
-            //Mensagem
-            Toast.makeText(MainActivity.this.getApplicationContext(), "Triângulo Selecionado", Toast.LENGTH_SHORT).show();
-        }
+        }else{
 
-        if (opcaoSelecionada.getText().toString().equals("Circulo")) {
-            //Caminho
-            Intent abridor = new Intent(this.getApplicationContext(), CirculoActivity.class);
-            startActivity(abridor);
-            //Mensagem
-            Toast.makeText(MainActivity.this.getApplicationContext(), "Circulo Selecionado", Toast.LENGTH_SHORT).show();
-        }
+            if (opcaoSelecionada.getText().toString().equals("Retângulo")) {
+                //Caminho
+                Intent abridor = new Intent(this.getApplicationContext(), RetanguloActivity.class);
+                startActivity(abridor);
+                //Mensagem
+                Toast.makeText(MainActivity.this.getApplicationContext(), "Retângulo Selecionado", Toast.LENGTH_SHORT).show();
+            }
 
+            if (opcaoSelecionada.getText().toString().equals("Triângulo")) {
+                // Caminho
+                Intent abridor = new Intent(this.getApplicationContext(), TrianguloActivity.class);
+                startActivity(abridor);
+                //Mensagem
+                Toast.makeText(MainActivity.this.getApplicationContext(), "Triângulo Selecionado", Toast.LENGTH_SHORT).show();
+            }
+
+            if (opcaoSelecionada.getText().toString().equals("Circulo")) {
+                //Caminho
+                Intent abridor = new Intent(this.getApplicationContext(), CirculoActivity.class);
+                startActivity(abridor);
+                //Mensagem
+                Toast.makeText(MainActivity.this.getApplicationContext(), "Circulo Selecionado", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
 }
@@ -104,7 +109,7 @@ public class MainActivity extends Activity {
 //        }
 //    }
 
-    //Segunda alternativa
+//Segunda alternativa
 //    radioGroupSelForma.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 //        @Override
 //        public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -122,7 +127,7 @@ public class MainActivity extends Activity {
 //        }
 //    });
 
-    //É pra dar certo
+//É pra dar certo
 //    public void clicouNoAvancar(View origemDoClique) {
 //
 //        //Verificando a seleção do RadioGroup

@@ -35,25 +35,29 @@ public class RetanguloActivity extends Activity{
         // 1 = retangulo
         int forma = 1;
 
-        //Mudar para outra activity
-        Intent abridor = new Intent(this.getApplicationContext(), AreaCalculoActivity.class);
+        if(editTextAlturaRetangulo.getText().toString().equals("") || editTextBaseRetangulo.getText().toString().equals("")){
+            Toast.makeText(RetanguloActivity.this.getApplicationContext(), "Dados Vazios apresentados !", Toast.LENGTH_SHORT).show();
+        }else {
+            //Mudar para outra activity
+            Intent abridor = new Intent(this.getApplicationContext(), AreaCalculoActivity.class);
 
-        //Parametros para empacotamento
-        double base = Double.parseDouble(editTextBaseRetangulo.getText().toString());
-        double altura = Double.parseDouble(editTextAlturaRetangulo.getText().toString());
+            //Parametros para empacotamento
+            double base = Double.parseDouble(editTextBaseRetangulo.getText().toString());
+            double altura = Double.parseDouble(editTextAlturaRetangulo.getText().toString());
 
-        validaCampo(editTextBaseRetangulo);
-        validaCampo(editTextAlturaRetangulo);
+            validaCampo(editTextBaseRetangulo);
+            validaCampo(editTextAlturaRetangulo);
 
-        //  Calculo para Triangulo
-        double resultado = base*altura;
+            //  Calculo para Triangulo
+            double resultado = base * altura;
 
-        //colocando na sacola
-        abridor.putExtra("resultadoEnviado", resultado);
-        abridor.putExtra(AreaCalculoActivity.FORMA, forma);
+            //colocando na sacola
+            abridor.putExtra("resultadoEnviado", resultado);
+            abridor.putExtra(AreaCalculoActivity.FORMA, forma);
 
-        //iniciando outra activity
-        startActivity(abridor);
+            //iniciando outra activity
+            startActivity(abridor);
+        }
     }
 
     protected void validaCampo( EditText origem){

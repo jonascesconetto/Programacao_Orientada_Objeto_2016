@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by cesco on 29/10/16.
@@ -32,21 +33,26 @@ public class CirculoActivity extends Activity {
         // 3 = circulo
         int forma = 3;
 
-        //Mudar para outra activity
-        Intent abridor = new Intent(this.getApplicationContext(), AreaCalculoActivity.class);
+        if(editTextRaioCirculo.getText().toString().equals("")){
+            Toast.makeText(CirculoActivity.this.getApplicationContext(), "Dado Vazio apresentado !", Toast.LENGTH_SHORT).show();
 
-        //Parametros para empacotamento
-        double raio = Double.parseDouble(editTextRaioCirculo.getText().toString());
+        }else {
+            //Mudar para outra activity
+            Intent abridor = new Intent(this.getApplicationContext(), AreaCalculoActivity.class);
 
-        //  Calculo para Triangulo
-        double resultado = (Math.PI * Math.pow(raio,2));
+            //Parametros para empacotamento
+            double raio = Double.parseDouble(editTextRaioCirculo.getText().toString());
 
-        //colocando na sacola valor arredondado para cima
-        abridor.putExtra("resultadoEnviado", arredondar(resultado,2,0));
-        abridor.putExtra(AreaCalculoActivity.FORMA, forma);
+            //  Calculo para Triangulo
+            double resultado = (Math.PI * Math.pow(raio, 2));
 
-        //iniciando outra activity
-        startActivity(abridor);
+            //colocando na sacola valor arredondado para cima
+            abridor.putExtra("resultadoEnviado", arredondar(resultado, 2, 0));
+            abridor.putExtra(AreaCalculoActivity.FORMA, forma);
+
+            //iniciando outra activity
+            startActivity(abridor);
+        }
     }
 
     //  Referencia:
