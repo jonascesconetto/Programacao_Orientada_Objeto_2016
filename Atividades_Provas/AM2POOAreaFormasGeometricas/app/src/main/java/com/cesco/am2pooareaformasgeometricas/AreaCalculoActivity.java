@@ -57,7 +57,7 @@ public class AreaCalculoActivity extends Activity {
 
         //Mudar para outra activity
         Intent abridor = new Intent(this.getApplicationContext(), MainActivity.class);
-
+        finish();
         //iniciando outra activity
         startActivity(abridor);
     }
