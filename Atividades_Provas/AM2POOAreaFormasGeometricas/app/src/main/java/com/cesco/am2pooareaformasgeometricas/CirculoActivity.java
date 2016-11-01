@@ -28,6 +28,9 @@ public class CirculoActivity extends Activity {
     }
 
     public void clicouCalcular(View origemDoClique) {
+        //controle da forma para fazer uma seleção da imagem em outra activity
+        // 3 = circulo
+        int forma = 3;
 
         //Mudar para outra activity
         Intent abridor = new Intent(this.getApplicationContext(), AreaCalculoActivity.class);
@@ -40,6 +43,7 @@ public class CirculoActivity extends Activity {
 
         //colocando na sacola valor arredondado para cima
         abridor.putExtra("resultadoEnviado", arredondar(resultado,2,0));
+        abridor.putExtra("tipoDeForma", forma);
 
         //iniciando outra activity
         startActivity(abridor);

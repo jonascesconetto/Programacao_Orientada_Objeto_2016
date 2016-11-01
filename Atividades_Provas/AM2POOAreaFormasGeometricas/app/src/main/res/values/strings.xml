@@ -17,6 +17,7 @@
     <!--Text Button-->
     <string name="btnAvancar">Avançar</string>
     <string name="btnCalcular">Calcular</string>
+    <string name="btnReiniciar">Começar Novamente</string>
 
     <!-- Text Info Dados-->
     <string name="txtInfoDadosCirculo">Informe o dado do circulo: </string>

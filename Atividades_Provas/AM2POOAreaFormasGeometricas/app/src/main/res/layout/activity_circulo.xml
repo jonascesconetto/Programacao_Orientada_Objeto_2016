@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,9 +11,11 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
+        android:paddingTop="@dimen/espacoBarraTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txtInfoDadosCirculo"
+        android:textStyle="bold"
         android:textSize="@dimen/titulo"
         />
 
@@ -20,19 +23,31 @@
 
         android:id="@+id/editTextRaioCirculo"
 
+        android:paddingTop="@dimen/espacoTituloInsert"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/txtDadoCirculo"
         />
 
-    <Button
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="end|bottom"
+        >
 
-        android:id="@+id/buttonCalcular"
+        <Button
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnCalcular"
-        android:onClick="clicouCalcular"
-        />
+            android:id="@+id/buttonCalcular"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnCalcular"
+            android:onClick="clicouCalcular"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>
+

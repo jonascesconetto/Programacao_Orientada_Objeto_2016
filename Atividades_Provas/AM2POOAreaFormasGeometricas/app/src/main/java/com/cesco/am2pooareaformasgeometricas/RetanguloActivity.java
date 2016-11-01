@@ -31,6 +31,9 @@ public class RetanguloActivity extends Activity{
     }
 
     public void clicouCalcular (View origemDoClique){
+        //controle da forma para fazer uma seleção da imagem em outra activity
+        // 3 = circulo
+        int forma = 1;
 
         //Mudar para outra activity
         Intent abridor = new Intent(this.getApplicationContext(), AreaCalculoActivity.class);
@@ -47,6 +50,7 @@ public class RetanguloActivity extends Activity{
 
         //colocando na sacola
         abridor.putExtra("resultadoEnviado", resultado);
+        abridor.putExtra("tipoDeForma", forma);
 
         //iniciando outra activity
         startActivity(abridor);

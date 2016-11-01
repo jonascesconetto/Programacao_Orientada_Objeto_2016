@@ -3,9 +3,17 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <!--Paddings-->
+    <dimen name="superiorFiguras">60dp</dimen>
+    <dimen name="inferiorFiguras">40dp</dimen>
+    <dimen name="espacoBarraTitulo">10dp</dimen>
+    <dimen name="espacoTituloInsert">50dp</dimen>
+    <dimen name="espacoTituloSelectForma">20dp</dimen>
+    <dimen name="espacoEntreOpcoesMenu">15dp</dimen>
+
     <!-- Text Size -->
     <dimen name="titulo">20dp</dimen>
     <dimen name="copoTexto">16dp</dimen>
-
+    <dimen name="textSizeTextCalculo">30dp</dimen>
 
 </resources>

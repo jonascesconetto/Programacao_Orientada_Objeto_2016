@@ -17,9 +17,11 @@
     tools:context="com.cesco.am2pooareaformasgeometricas.MainActivity">
 
     <TextView
+        android:paddingTop="@dimen/espacoBarraTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txtTipoFormaGeometrica"
+        android:textStyle="bold"
         android:textSize="@dimen/titulo"
         />
 
@@ -27,6 +29,7 @@
 
         android:id="@+id/radioGroupSelForma"
 
+        android:paddingTop="@dimen/espacoTituloSelectForma"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -45,6 +48,7 @@
 
             android:id="@+id/radioButtonTriangulo"
 
+            android:layout_marginTop="@dimen/espacoEntreOpcoesMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/radioBtnTriangulo"
@@ -55,6 +59,7 @@
 
             android:id="@+id/radioButtonCirculo"
 
+            android:layout_marginTop="@dimen/espacoEntreOpcoesMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/radioBtnCirculo"
@@ -63,14 +68,22 @@
 
     </RadioGroup>
 
-    <Button
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="end|bottom"
+        >
 
-        android:id="@+id/buttonAvancar"
+        <Button
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnAvancar"
-        android:onClick="clicouNoAvancar"
-        />
+            android:id="@+id/buttonAvancar"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnAvancar"
+            android:onClick="clicouNoAvancar"
+            />
+    </LinearLayout>
 
 </LinearLayout>
