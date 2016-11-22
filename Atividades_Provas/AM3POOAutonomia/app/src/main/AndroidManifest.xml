@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cesco.am3pooautonomia">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/titleMain"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".CadastroActivity"
+            android:label="@string/titleCadActivity" >
+        </activity>
+
+        <activity
+            android:name=".ShowAllActivity"
+            android:label="@string/titleListagemActivity" >
+        </activity>
+
+        <activity
+            android:name=".ConfirmaDadosCadastroActivity"
+            android:label="@string/titleConfirmaCad" >
+        </activity>
+
+    </application>
+
+</manifest>

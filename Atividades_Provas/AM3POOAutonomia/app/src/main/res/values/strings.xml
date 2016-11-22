@@ -1,0 +1,53 @@
+<resources>
+    <string name="titleMain">Autonomia A_M3</string>
+    <string name="titleCadActivity">Novo Abastecimento</string>
+    <string name="titleListagemActivity">Abastecimentos</string>
+    <string name="titleConfirmaCad">Confirma os Dados?</string>
+
+    <!--Text label-->
+    <string name="labelAutonomiaAtual">Autonomia Atual</string>
+    <string name="labelKmAtual">Quilometragem atual</string>
+    <string name="labelLitrosAbastecidos">Litros abastecidos</string>
+    <string name="labelDataAbastecimento">Data abastecimento</string>
+    <string name="labelPosto">Posto</string>
+
+    <!--Text in Button-->
+    <string name="btnNovoAbastecimento">Adicionar abastecimento</string>
+    <string name="btnVisualizarAbastecimentos">Visualizar abastecimentos</string>
+    <string name="btnConfirmar">Confirmar</string>
+    <string name="btnSalvar">Salvar</string>
+
+    <!--Hint-->
+    <string name="hintExKm">Exemplo: 8000</string>
+    <string name="hintExLitros">Exemplo: 40</string>
+    <string name="hintExData">Exemplo: dd/mm/yyyy</string>
+
+    <!--Spinner Posto de Combustivel-->
+    <string-array name="spItensPosto">
+        <item>Informe a bandeira do Posto</item>
+        <item>Texaco</item>
+        <item>Shell</item>
+        <item>Petrobras</item>
+        <item>Ipiranga</item>
+        <item>Outros</item>
+    </string-array>
+
+    <!--Corpo de Texto de Mensagens-->
+    <string name="textQuilometragem">Quilometragem:</string>
+    <string name="textLitros">Litros:</string>
+    <string name="textData">Data:</string>
+    <string name="textPosto">Posto:</string>
+    <string name="textKm">Km:</string>
+
+    <!--Info-->
+    <string name="infoFormularioInvalido">Formulário inválido</string>
+    <string name="infoErroInsertKmSuperior">Quilometragem informada é menor que a anterior</string>
+    <string name="infoAbastecimentoRealizadoSucesso">Abastecimento Salvo com Sucesso</string>
+
+    <string name="infoErroInsertKm">Quilometragem invalida!</string>
+    <string name="infoErroInsertLitros">Litros invalidos!</string>
+    <string name="infoErroInsertData">Data invalida!</string>
+    <string name="infoErroInsertPosto">Posto invalido!</string>
+
+
+</resources>

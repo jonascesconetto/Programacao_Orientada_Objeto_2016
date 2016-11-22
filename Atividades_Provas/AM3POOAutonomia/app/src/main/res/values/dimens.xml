@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Margin -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="cardViewPaddingBetwenCards">5dp</dimen>
+
+    <!--Paddings-->
+    <dimen name="sizePaddingCadActivity">30dp</dimen>
+    <dimen name="sizePaddingBetweenButtons">10dp</dimen>
+
+    <!--Labels Size -->
+    <dimen name="sizeLabelAutonomia">20dp</dimen>
+    <dimen name="sizeLabelTextRelevante">60dp</dimen>
+
+    <!--Text size-->
+    <dimen name="sizeTextView">20dp</dimen>
+    <dimen name="sizeEditText">15dp</dimen>
+    <dimen name="sizeTextItenList">15dp</dimen>
+
+    <!--Btn Size-->
+    <dimen name="btnSize">18dp</dimen>
+
+
+
+
+</resources>

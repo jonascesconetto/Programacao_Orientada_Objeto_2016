@@ -1,0 +1,69 @@
+<android.support.v7.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/card_view"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_margin="@dimen/cardViewPaddingBetwenCards"
+
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/tvData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="21/11/2016"
+            android:textSize="@dimen/sizeTextItenList"
+            android:textStyle="bold"
+            android:layout_marginStart="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvQuilometragem"
+            android:paddingTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Km 85000"
+            android:textSize="@dimen/sizeTextItenList"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvData"
+            android:layout_alignStart="@+id/tvData" />
+
+        <ImageView
+            android:id="@+id/ivIconePosto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/br_logo"
+            android:layout_marginEnd="10dp"
+            android:layout_alignBottom="@+id/tvLitros"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/tvLitros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Litros: 800"
+            android:textSize="@dimen/sizeTextItenList"
+            android:textStyle="bold"
+            android:layout_alignBaseline="@+id/tvQuilometragem"
+            android:layout_alignBottom="@+id/tvQuilometragem"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

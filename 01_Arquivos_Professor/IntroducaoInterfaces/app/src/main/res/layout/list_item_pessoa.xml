@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="90dp">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:id="@+id/ivIconePessoa"
+        android:src="@drawable/iconepessoa"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivIconePessoa"
+        android:text="Aqui vai o nome"
+        android:id="@+id/tvNome"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivIconePessoa"
+        android:text="Aqui vai a idade"
+        android:layout_below="@id/tvNome"
+        android:id="@+id/tvIdade"
+        />
+
+</RelativeLayout>
