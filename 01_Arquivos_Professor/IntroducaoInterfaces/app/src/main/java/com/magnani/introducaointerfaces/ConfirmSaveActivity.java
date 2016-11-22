@@ -12,7 +12,6 @@ import com.magnani.introducaointerfaces.dao.PessoaDao;
 import com.magnani.introducaointerfaces.modelo.Pessoa;
 
 public class ConfirmSaveActivity extends Activity {
-
     private Pessoa pessoa;
 
     @Override

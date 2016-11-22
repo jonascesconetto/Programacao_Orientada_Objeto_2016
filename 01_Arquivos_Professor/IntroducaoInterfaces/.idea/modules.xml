@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/IntroducaoInterfaces.iml" filepath="$PROJECT_DIR$/IntroducaoInterfaces.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file:///media/descartavel/temp_files/AulaJava2/IntroducaoInterfaces/IntroducaoInterfaces.iml" filepath="/media/descartavel/temp_files/AulaJava2/IntroducaoInterfaces/IntroducaoInterfaces.iml" />
+      <module fileurl="file:///media/descartavel/temp_files/AulaJava2/IntroducaoInterfaces/app/app.iml" filepath="/media/descartavel/temp_files/AulaJava2/IntroducaoInterfaces/app/app.iml" />
     </modules>
   </component>
 </project>

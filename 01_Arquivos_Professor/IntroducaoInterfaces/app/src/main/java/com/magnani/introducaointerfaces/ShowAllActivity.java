@@ -11,7 +11,6 @@ import android.widget.ListView;
 
 import com.magnani.introducaointerfaces.adapter.PessoaAdapter;
 import com.magnani.introducaointerfaces.adapter.PessoaAdapterRecycle;
-import com.magnani.introducaointerfaces.dao.PessoaDao;
 import com.magnani.introducaointerfaces.modelo.Pessoa;
 
 import java.util.ArrayList;
@@ -24,28 +23,27 @@ public class ShowAllActivity extends Activity {
         setContentView(R.layout.activity_show_all);
 
 //        ArrayList<Pessoa> lista = PessoaDao.obterLista();
-//        ArrayList<Pessoa> lista = new ArrayList<>();
-//        for(int i = 0; i < 100; i++){
-//            Pessoa obj = new Pessoa();
-//            obj.setNome("Pessoa "+i);
-//            obj.setSobrenome("Sobrenome "+i);
-//            obj.setIdade(i);
-//            String sexo = (Math.random() < 0.5 ? "M" : "F");
-//            obj.setSexo(sexo);
-//            lista.add(obj);
-//        }
+        ArrayList<Pessoa> lista = new ArrayList<>();
+        for(int i = 0; i < 100; i++){
+            Pessoa obj = new Pessoa();
+            obj.setNome("Pessoa "+i);
+            obj.setSobrenome("Sobrenome "+i);
+            obj.setIdade(i);
+            String sexo = (Math.random() < 0.5 ? "M" : "F");
+            obj.setSexo(sexo);
+            lista.add(obj);
+        }
+
+
         //List view
 //        ListView lvListaPessoas = (ListView) findViewById(R.id.lvListaPessoas);
-//        ArrayAdapter<Pessoa> adaptador = new ArrayAdapter<Pessoa>(
-//                this.getApplicationContext(),
-//                android.R.layout.simple_list_item_1,
-//                PessoaDao.obterLista()
-//        );
-
+////        ArrayAdapter<Pessoa> adaptador = new ArrayAdapter<Pessoa>(
+////                this.getApplicationContext(),
+////                android.R.layout.simple_list_item_1,
+////                PessoaDao.obterLista()
+////        );
 //        PessoaAdapter adaptador = new PessoaAdapter(this.getApplicationContext(), 0, lista);
 //        lvListaPessoas.setAdapter(adaptador);
-
-        ArrayList<Pessoa> lista = PessoaDao.obterLista();
 
         RecyclerView rvListaPessoas = (RecyclerView) findViewById(R.id.rvListaPessoas);
 
