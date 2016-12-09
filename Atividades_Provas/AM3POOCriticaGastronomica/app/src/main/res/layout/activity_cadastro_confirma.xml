@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            >
+
+            <TextView
+                android:id="@+id/tvData"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="Teste Data"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textViewSize"
+
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/tvDescricao"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="Teste Descrição"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textViewSize"
+
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/tvCategoria"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="Teste Catiguria"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textViewSize"
+
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/tvAvaliacao"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="Teste Avaliation"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textViewSize"
+
+                android:gravity="center"
+                />
+
+            <ImageView
+                android:id="@+id/ivFotoComidaConfirma"
+
+                android:adjustViewBounds="true"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+
+            <LinearLayout
+                android:orientation="vertical"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="bottom|center"
+                >
+
+                <ProgressBar
+                    android:id="@+id/pbLoader"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:visibility="invisible"
+
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:text="@string/btnSalvar"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/btnSize"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorPrimary"
+
+                    android:onClick="clicouNoBotao"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

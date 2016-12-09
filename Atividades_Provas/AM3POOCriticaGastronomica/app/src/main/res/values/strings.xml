@@ -1,0 +1,39 @@
+<resources>
+
+    <!--Page Title-->
+    <string name="titleMain">MyFoodLog</string>
+    <string name="titleCadastroCritica">Nova Critica</string>
+    <string name="titleCadastroCriticaConfirma">Confirmar Dados</string>
+
+    <!--Text label-->
+    <string name="labelDescricao">Descrição</string>
+    <string name="labelCategoria">Categoria</string>
+    <string name="labelFoto">Foto</string>
+
+    <!--Text in Button-->
+    <string name="btnSalvar">Salvar</string>
+
+    <!--Hint-->
+    <string name="hintDescricao">Exemplo: A comida estava muito boa</string>
+
+    <!--Radio Button-->
+    <string name="rbTextEntrada">Entrada</string>
+    <string name="rbTextPratoPrincipal">Prato Principal</string>
+    <string name="rbTextSobremesa">Sobremesa</string>
+    <string name="rbTextLanche">Lanche</string>
+
+    <!--Corpo de Texto de Mensagens-->
+    <string name="textData">Data:</string>
+    <string name="textDescricao">Descrição:</string>
+    <string name="textCategoria">Categoria:</string>
+    <string name="textAvaliacao">Avaliação:</string>
+
+    <!--Mensagens Personalizadas-->
+    <string name="textAvaliacaoDataConcatenados">Avaliado com %1$d estrelas em %2$s</string>
+
+    <!--Info-->
+    <string name="infoSalvoComSucesso">Salvo com Sucesso</string>
+    <string name="infoDadosDescartados">Dados Descartados</string>
+    <string name="formulario_invalido">Formulário inválido</string>
+
+</resources>

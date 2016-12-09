@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Margin -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="marginButtonSave">10dp</dimen>
+    <!--Text size-->
+    <dimen name="textViewSize">20dp</dimen>
+    <dimen name="editTextSize">18dp</dimen>
+    <dimen name="radioButtonSize">18dp</dimen>
+    <dimen name="textItenListSize">18dp</dimen>
+    <!--Padding Cadastro-->
+    <dimen name="paddingCadastroTop">5dp</dimen>
+    <dimen name="paddingCadastroBottom">5dp</dimen>
+    <!--Btn Size-->
+    <dimen name="btnSize">18dp</dimen>
+    <!--Card Especial editions-->
+    <dimen name="marinListItemTop">10dp</dimen>
+    <dimen name="marinListItemLeft">10dp</dimen>
+    <dimen name="marinListItemRight">5dp</dimen>
+    <dimen name="marinListItemBottom">5dp</dimen>
+    <dimen name="paddingListItemTop">5dp</dimen>
+    <dimen name="paddingBetwenCardsView">5dp</dimen>
+    <dimen name="marinListItemTopDataEAvaliacao">10dp</dimen>
+    <dimen name="widthImageCard">150dp</dimen>
+    <dimen name="heightImageCard">100dp</dimen>
+
+</resources>

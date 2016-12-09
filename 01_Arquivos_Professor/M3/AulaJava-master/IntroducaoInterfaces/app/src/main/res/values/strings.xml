@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">IntroducaoInterfaces</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="nome">Nome</string>
+    <string name="digite_seu_nome">Digite seu nome...</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="idade">Idade</string>
+    <string name="sexo">Sexo</string>
+    <string name="masculino">Masculino</string>
+    <string name="feminino">Femino</string>
+    <string name="salvar">Salvar</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="digite_sua_idade">Digite sua idade</string>
+    <string name="digite_seu_sobrenome">Digite seu sobrenome</string>
+    <string name="formulario_invalido">Formulário inválido</string>
+    <string name="voce_tem_certeza_que_deseja_salvar">Você tem certeza que deseja salvar?</string>
+    <string name="pessoa_NOME_armazenada_com_sucesso">%1$s salvo com sucesso</string>
+    <string name="title_activity_view_all">ViewAllActivity</string>
+    <string name="ver_todos">Ver todos</string>
+    <string name="mostrar_todos">Mostrar todos</string>
+    <string name="title_activity_show_all">ShowAll</string>
+    <string name="descricao_pessoa">O %1$s tem %2$d anos é do sexo %3$s. Bla bla bla</string>
+    <string name="tirar_foto">Tirar foto</string>
+    <string name="obter_dos_contatos">Obter dos contatos</string>
+    <string name="title_activity_weather">WeatherActivity</string>
+    <string name="obter">Obter</string>
+    <string name="cidade">Cidade</string>
+    <string name="tempo_por_cidade">Tempo por cidade</string>
+    <string name="obter_meu_local">Obter meu local (GPS)</string>
+
+
+</resources>
